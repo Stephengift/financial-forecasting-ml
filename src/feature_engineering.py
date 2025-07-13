@@ -73,11 +73,11 @@ def main():
     print(processed_data[['Close', 'Returns', 'Volatility', 'SMA_20', 'EMA_20']].tail())
     
     # Test create_sequences - THE MOST IMPORTANT PART
-    print("\n🎯 Testing create_sequences (for LSTM):")
+    print("\n Testing create_sequences (for LSTM):")
     X, y = fe.create_sequences(processed_data)
-    print(f"✅ X shape: {X.shape}")  # Should be (samples, 60, 4)
-    print(f"✅ y shape: {y.shape}")  # Should be (samples,)
-    print("Ready for LSTM! 🚀")
+    print(f" X shape: {X.shape}")  # Should be (samples, 60, 4)
+    print(f" y shape: {y.shape}")  # Should be (samples,)
+    
 
 
 if __name__ == "__main__":

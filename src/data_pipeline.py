@@ -211,7 +211,7 @@ def main():
     start_date = "2022-01-01"  # Extended date range for more data
     end_date = datetime.datetime.now().strftime("%Y-%m-%d")
     
-    print("📈 Downloading market data...")
+    print(" Downloading market data...")
     print(f"Downloading data for {len(tickers)} tickers from {start_date} to {end_date}")
     print("-" * 50)
 
@@ -225,16 +225,16 @@ def main():
     # Generate summary
     if data_dict:
         summary = pipeline.get_market_data_summary(data_dict)
-        print("\n📊 Data Download Summary:")
+        print("\n Data Download Summary:")
         print(summary.to_string(index=False))
 
         # Save processed data
         pipeline.save_processed_data(data_dict)
 
-        print("\n✅ Data processing complete!")
+        print("\n Data processing complete!")
         print(f"Processed data saved to {pipeline.data_dir}")
     else:
-        print("❌ No data downloaded. Please check the tickers and date range.")
+        print(" No data downloaded. Please check the tickers and date range.")
 
 if __name__ == "__main__":
     main()
