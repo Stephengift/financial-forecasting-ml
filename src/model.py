@@ -1,11 +1,12 @@
 """
 LSTM Model for Stock Price Prediction
-Senior Engineer building this step by step for junior developer
-"""
+This module contains the StockLSTM class which implements an LSTM model for predicting stock prices."""
 
 import numpy as np
 import pandas as pd
 import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense, Dropout
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 import pickle
